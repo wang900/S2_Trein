@@ -1,0 +1,103 @@
+/* home index */
+body{
+    background-color: #e6e6e9 !important;
+}
+
+h5{
+    color: white;
+    display: inline;
+}
+
+h2{
+    position: relative;
+    color: white;
+    top: 200px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .parentContainer, .navbar {   
+      flex-direction: column;
+    }
+}
+
+.navbar{
+    background-color: #ffffff;
+    display: flex;
+}
+ 
+.square{
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 600px;
+    background-color: #97d5e7;
+    text-align: center;
+    text-anchor: end;
+}
+
+
+.textinput{
+    top: 300px;
+    display: inline-block;
+    height:200px;
+    font-size:14pt;
+    width: 30%;
+    position: relative;
+}
+
+.fas{
+    margin-left: 5px;
+}
+
+.parentContainer {
+    width: 100%;
+    height: 100%;
+    max-width: 100% !important; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn{
+    position: relative;
+    top: 170px;
+}
+
+#plannen{
+    background-color: lightsalmon;
+}
+
+#plannen:hover{
+    background-color: #eb6a4a
+}
+
+#switch{
+    top:295px;  
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* end home index */
+
+/* login */
+
+.inputlogin{
+    position: relative;
+    font-size:14pt;
+    top: 300px;
+}
+
+.loginbox{
+    background-color: grey; 
+    width: 100%;
+    height: 100%;
+}
+
+/* end login */
+
+/* treinlijst */
+
+#treinlijst{
+    text-align: left;
+}

@@ -1,0 +1,51 @@
+﻿@model ProfielViewModel
+
+@{
+    ViewData["Title"] = "Profiel";
+}
+
+<h1>Profiel</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Gebruikersnaam" value="@Model.Gebruikersnaam" />
+            <div class="form-group">
+                <label asp-for="Voornaam" class="control-label"></label>
+                <input asp-for="Voornaam" class="form-control" value="@Model.Voornaam" />
+                <span asp-validation-for="Voornaam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Achternaam" class="control-label"></label>
+                <input asp-for="Achternaam" class="form-control" value="@Model.Achternaam" />
+                <span asp-validation-for="Achternaam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" value="@Model.Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wachtwoord" class="control-label"></label>
+                <input asp-for="Wachtwoord" class="form-control" value="@Model.Wachtwoord" />
+                <span asp-validation-for="Wachtwoord" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NieuwWachtwoord" class="control-label"></label>
+                <input asp-for="NieuwWachtwoord" class="form-control" value="@Model.NieuwWachtwoord" />
+                <span asp-validation-for="NieuwWachtwoord" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmNieuwWachtwoord" class="control-label"></label>
+                <input asp-for="ConfirmNieuwWachtwoord" class="form-control" value="@Model.ConfirmNieuwWachtwoord" />
+                <span asp-validation-for="ConfirmNieuwWachtwoord" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿@model TreinbeheersysteemMain.Models.VerbindingDetailViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>VerbindingDetailViewModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Naam)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Naam)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lengte)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lengte)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BeginPerronId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BeginPerronId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EindPerronId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EindPerronId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Actief)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Actief)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,48 @@
+﻿@model VerbindingDetailViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>VerbindingDetailViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Naam" class="control-label"></label>
+                <input asp-for="Naam" class="form-control" />
+                <span asp-validation-for="Naam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="BeginPerronId" class="control-label">Station</label>
+                <select asp-for="BeginPerronId" type="text" class="form-control" title="Station van het perron">
+                    @foreach (PerronDetailViewModel Perron in Model.PerronViewModel.Perrons)
+                    {
+                        <option value="@Perron.Id">@Perron.Naam @Perron.StationId</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="EindPerronId" class="control-label"></label>
+                <input asp-for="EindPerronId" class="form-control" />
+                <span asp-validation-for="EindPerronId" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Actief" /> @Html.DisplayNameFor(model => model.Actief)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

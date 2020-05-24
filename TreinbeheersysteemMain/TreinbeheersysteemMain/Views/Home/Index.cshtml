@@ -1,0 +1,73 @@
+﻿@model TicketDetailViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<div class="parentContainer hidden" id="parentContainer">
+    <div class="square">
+        <div><h2>Plan uw reis</h2></div>
+        <form asp-action="Index">
+            <div class="textinput">
+                <div class="ui-widget">
+                    <label class="control-label h5">Van: </label>
+                    <select asp-for="BeginStationId" id="combobox">
+                        @foreach (StationDetailViewModel Station in Model.StationViewModel.Stations)
+                        {
+                            <option value="@Station.Id">@Station.Naam</option>
+                        }
+                    </select>
+                    <span asp-validation-for="BeginStationId" class="text-danger"></span>
+                </div>
+                <button type="button" class="btn btn-secondary" id="switch"><i class="fas fa-arrows-alt-h"></i></button>
+            </div>
+            <div class="textinput">
+                <div class="ui-widget">
+                    <label class="control-label h5">Naar: </label>
+                    <select asp-for="EindStationId" id="combobox2">
+                        @foreach (StationDetailViewModel Station in Model.StationViewModel.Stations)
+                        {
+                            <option value="@Station.Id">@Station.Naam</option>
+                        }
+                    </select>
+                    <br>
+                    <span asp-validation-for="EindStationId" class="text-danger"></span>
+                </div>
+            </div>
+            <br>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-secondary">Vertrek</button>
+                <button type="button" class="btn btn-secondary">Aankomst</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-secondary"><i class="fas fa-calendar-alt"></i> Datum</button>
+                <button type="button" class="btn btn-secondary"><i class="fas fa-clock"></i> Tijd</button>
+            </div>
+            <button type="submit" class="btn btn-secondary" id="plannen">Plannen <i class="fas fa-chevron-right"></i></button>
+        </form>
+    </div>
+</div>
+<div class="jumbotron">
+    <h1 class="display-4">De beste vliegservice, met de veiligste vluchten</h1>
+    <p class="lead">
+        Heeft u ook een vlucht nodig naar Gniffeltanië en is de trein te traag? Gebruik dan Stÿhnyja Airlines' geweldige vliegservice. <br>
+        Nooit een vlucht dat te laat komt en de service heeft geen veiligheidsscore van 2 maar heeft een score van 3! <br>
+        Dus waar wacht je op en pak je kans!
+    </p>
+    <hr class="my-4">
+    <p>Klik hier voor de reis van uw leven!</p>
+    <a class="btn btn-primary btn-lg" style="top: 0px;" href="http://i412095core.venus.fhict.nl/" role="button">Boek vlucht bij Stÿhnyja Airlines</a>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("parentContainer").removeClass("hidden");
+        });
+}
+    </script>
+}

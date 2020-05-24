@@ -1,0 +1,122 @@
+﻿/* home index */
+body {
+    background-color: #e6e6e9;
+}
+
+h5 {
+    color: white;
+    display: inline;
+}
+
+h2 {
+    position: relative;
+    color: white;
+    top: 200px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .parentContainer, .navbar {
+        flex-direction: column;
+    }
+}
+
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+}
+
+.square {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 600px;
+    background-color: #97d5e7;
+    text-align: center;
+    text-anchor: end;
+}
+
+
+.textinput {
+    top: 300px;
+    display:inline-grid;
+    margin-left: 0 auto;
+    height: 200px;
+    font-size: 14pt;
+    width: 30%;
+    position: relative;
+}
+
+.fas {
+    margin-left: 5px;
+}
+
+.parentContainer {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    position: relative;
+    top: 170px;
+}
+
+#plannen {
+    background-color: #568B9C;
+}
+
+    #plannen:hover {
+        background-color: #BFF0FF;
+    }
+
+#switch {
+    top: unset;
+    bottom: 100px;
+    left:90%;
+    display:inline-flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    width: 50px;
+}
+/* end home index */
+
+/* login */
+
+#inputlogin {
+    margin-top: 10px;
+    top: 200px;
+}
+
+.loginbox {
+    background-color: grey;
+    width: 50%;
+    height: 100%;
+}
+
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+}
+
+.custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.ui-widget {
+    display: inline-block;
+}

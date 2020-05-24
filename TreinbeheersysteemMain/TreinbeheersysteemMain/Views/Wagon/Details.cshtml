@@ -1,0 +1,48 @@
+﻿@model TreinbeheersysteemMain.Models.WagonDetailViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>WagonDetailViewModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Naam)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Naam)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Stoelaantal_Klasse1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stoelaantal_Klasse1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Stoelaantal_Klasse2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stoelaantal_Klasse2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TreinId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TreinId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Actief)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Actief)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
